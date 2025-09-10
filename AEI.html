@@ -4,69 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antapura Energi Indonesia - Visi & Misi</title>
+  <meta name="description" content="Visi & Misi Antapura Energi Indonesia (AEI) - Spesialis konstruksi minyak, gas, HDD, dan kabel listrik 150 kVA.">
+  <meta name="keywords" content="Antapura Energi Indonesia, AEI, Energi, Minyak, Gas, Konstruksi, HDD, Kabel Listrik">
+  <meta name="author" content="Antapura Group">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Heroicons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
 
-  <!-- Navbar sederhana -->
+  <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold text-blue-700">Antapura Energi Indonesia</h1>
-      <nav>
-        <button onclick="window.history.back()" 
-            class="bg-gray-700 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 mb-6">
-      ← Kembali
-    </button>
+      <h1 class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
+        <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
+        <a href="index.html#services" class="hover:text-blue-600">Layanan</a>
+        <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
+        <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
       </nav>
+      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
+      <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
+      <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
+      <a href="index.html#services" class="block hover:text-blue-600">Layanan</a>
+      <a href="project-showcase.html" class="block hover:text-blue-600">Project Showcase</a>
+      <a href="index.html#contact" class="block hover:text-blue-600">Kontak</a>
     </div>
   </header>
 
-  <!-- Konten -->
-<section class="container mx-auto pt-28 pb-20 text-center">
-  <h2 class="text-3xl font-bold mb-6">Visi & Misi</h2>
-
-  
-    
-    <div class="max-w-3xl mx-auto text-left space-y-6">
-	  <div> 
-	  <p>
-	  • Antapura Energy Indonesia adalah perusahaan konstruksi minyak dan gas serta kabel listrik 150 kVA yang baru berdiri untuk pengeboran horizontal. Kami memiliki kemampuan untuk memberikan layanan terbaik dalam rekayasa tanpa parit, terutama pengeboran horizontal. Kami diakui dan dipercaya sebagai spesialis independen.
-      </p>
-	  <p>
-      •Spesialis dalam layanan konstruksi minyak dan gas serta kabel listrik untuk pengeboran terarah dan konstruksi sipil.
-	  </p>
-	  <p>
-      • Keahlian khusus dalam rekayasa, manajemen proyek, tenaga kerja berpengalaman, dan peralatan berkualitas tinggi adalah keunggulan Tim Antapura Energy Indonesia.
-       </p>
-	   <p>
-      • Sebagai perusahaan baru, kami andal, fleksibel, dan mampu menyelesaikan pekerjaan serta memenuhi target proyek – mulai dari desain awal hingga penyelesaian laporan inspeksi.
-
-	  </p>
-	  
-	  
-	  </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2 text-blue-700">Visi</h3>
-        <ul class="list-disc pl-6 space-y-2">
-        <li>Dikenal sebagai perusahaan konstruksi bereputasi baik dengan biaya efektif dan pengiriman tepat waktu.</li>
-		</ul>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2 text-blue-700">Misi</h3>
-        <ul class="list-disc pl-6 space-y-2">
-         <li>Mengembangkan proyek energi terbarukan yang inovatif.</li>
-         <li>Menyampaikan proyek konstruksi yang lebih sukses untuk industri listrik dan industri minyak & gas..</li>
-         <li>Mengedepankan keselamatan kerja dan tanggung jawab sosial.</li>
-         <li>Menerapkan teknologi modern untuk efisiensi dan keberlanjutan.</li>
-        </ul>
-      </div>
-	  
-	<h3 class="text-2xl font-bold mb-6 text-blue-700 text-center">Certification CSMS</h3>
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-      <img src="sertifikat1-csms.jpg" alt="proyek 1" class="w-full h-80 object-cover rounded-lg shadow-md">
-      <img src="sertifikat2-csms.jpg" alt="proyek 2" class="w-full h-80 object-cover rounded-lg shadow-md">
-      <img src="sertifikat3-csms.jpg" alt="proyek 3" class="w-full h-80 object-cover rounded-lg shadow-md">
+  <!-- Hero -->
+  <section class="h-72 flex items-center justify-center bg-blue-700 text-white text-center mt-16" data-aos="fade-up">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">Antapura Energi Indonesia</h2>
+      <p class="text-lg">Visi & Misi - Spesialis Energi, Minyak, Gas & Kabel Listrik</p>
     </div>
+  </section>
+
+  <!-- Konten -->
+  <section class="container mx-auto pt-20 pb-20 text-center">
+    <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Visi & Misi</h2>
+
+    <div class="max-w-3xl mx-auto text-left space-y-6" data-aos="fade-up" data-aos-delay="100">
+      <p>• Antapura Energy Indonesia adalah perusahaan konstruksi minyak dan gas serta kabel listrik 150 kVA yang baru berdiri untuk pengeboran horizontal. Kami memiliki kemampuan untuk memberikan layanan terbaik dalam rekayasa tanpa parit, terutama pengeboran horizontal. Kami diakui dan dipercaya sebagai spesialis independen.</p>
+      <p>• Spesialis dalam layanan konstruksi minyak dan gas serta kabel listrik untuk pengeboran terarah dan konstruksi sipil.</p>
+      <p>• Keahlian khusus dalam rekayasa, manajemen proyek, tenaga kerja berpengalaman, dan peralatan berkualitas tinggi adalah keunggulan Tim Antapura Energy Indonesia.</p>
+      <p>• Sebagai perusahaan baru, kami andal, fleksibel, dan mampu menyelesaikan pekerjaan serta memenuhi target proyek – mulai dari desain awal hingga penyelesaian laporan inspeksi.</p>
+    </div>
+
+    <div class="mt-12" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-xl font-semibold mb-2 text-blue-700">Visi</h3>
+      <ul class="list-disc pl-6 space-y-2 text-left max-w-2xl mx-auto">
+        <li>Dikenal sebagai perusahaan konstruksi bereputasi baik dengan biaya efektif dan pengiriman tepat waktu.</li>
+      </ul>
+    </div>
+
+    <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="text-xl font-semibold mb-2 text-blue-700">Misi</h3>
+      <ul class="list-disc pl-6 space-y-2 text-left max-w-2xl mx-auto">
+        <li>Mengembangkan proyek energi terbarukan yang inovatif.</li>
+        <li>Menyampaikan proyek konstruksi yang lebih sukses untuk industri listrik dan industri minyak & gas.</li>
+        <li>Mengedepankan keselamatan kerja dan tanggung jawab sosial.</li>
+        <li>Menerapkan teknologi modern untuk efisiensi dan keberlanjutan.</li>
+      </ul>
+    </div>
+
+    <!-- Sertifikasi -->
+    <h3 class="text-2xl font-bold mt-16 mb-6 text-blue-700 text-center" data-aos="fade-up">Certification CSMS</h3>
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <img src="sertifikat1-csms.jpg" alt="Sertifikat 1" class="w-full h-80 object-cover rounded-lg shadow-md" data-aos="zoom-in">
+      <img src="sertifikat2-csms.jpg" alt="Sertifikat 2" class="w-full h-80 object-cover rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="100">
+      <img src="sertifikat3-csms.jpg" alt="Sertifikat 3" class="w-full h-80 object-cover rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="200">
     </div>
   </section>
 
@@ -74,6 +89,28 @@
   <footer class="bg-gray-900 text-white py-6 text-center">
     <p>&copy; 2025 Antapura Group. All rights reserved.</p>
   </footer>
+
+  <!-- Script -->
+  <script>
+    // Toggle menu mobile
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Feather icons
+    feather.replace();
+  </script>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 
 </body>
 </html>

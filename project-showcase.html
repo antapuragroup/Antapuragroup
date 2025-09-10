@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Showcase - Antapura Group</title>
+  <meta name="description" content="Project Showcase Antapura Group - Galeri proyek energi, power, dan sumber daya alam.">
+  <meta name="keywords" content="Antapura Group, Energi, Power, Resources, Project Showcase">
+  <meta name="author" content="Antapura Group">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Heroicons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
 
@@ -31,7 +43,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="h-72 flex items-center justify-center bg-blue-700 text-white text-center mt-16">
+  <section class="h-72 flex items-center justify-center bg-blue-700 text-white text-center mt-16" data-aos="fade-up">
     <div>
       <h2 class="text-4xl font-bold mb-4">Project Showcase</h2>
       <p class="text-lg">Galeri proyek dan pencapaian Antapura Group</p>
@@ -40,34 +52,34 @@
 
   <!-- Galeri Proyek -->
   <section class="container mx-auto py-20">
-    <h3 class="text-3xl font-bold text-center text-blue-700 mb-10">Galeri Proyek</h3>
+    <h3 class="text-3xl font-bold text-center text-blue-700 mb-10" data-aos="fade-up">Galeri Proyek</h3>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
         <img src="proyek1-AEI.jpg" alt="Proyek 1" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
         <img src="proyek2-AEI.jpg" alt="Proyek 2" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
         <img src="proyek3-AEI.jpg" alt="Proyek 3" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
         <img src="proyek4-AEI.jpg" alt="Proyek 4" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
         <img src="proyek5-AEI.jpg" alt="Proyek 5" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
         <img src="proyek6-AEI.jpg" alt="Proyek 6" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
         <img src="proyek1-APR.jpg" alt="Proyek 7" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
         <img src="proyek2-APR.jpg" alt="Proyek 8" class="w-full h-64 object-cover gallery-img">
       </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
         <img src="proyek3-APR.jpg" alt="Proyek 9" class="w-full h-64 object-cover gallery-img">
       </div>
     </div>
@@ -153,6 +165,18 @@
         if (e.key === "ArrowLeft") prevImage();
         if (e.key === "Escape") closeModal();
       }
+    });
+
+    // Feather icons
+    feather.replace();
+  </script>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 
