@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Antapura Group</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero {
+      transition: background-image 1s ease-in-out;
+    }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
 
@@ -16,6 +21,7 @@
         <a href="#about" class="hover:text-blue-600">Tentang</a>
         <a href="#companies" class="hover:text-blue-600">Perusahaan</a>
         <a href="#services" class="hover:text-blue-600">Layanan</a>
+        <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
         <a href="#contact" class="hover:text-blue-600">Kontak</a>
       </nav>
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
@@ -24,19 +30,40 @@
       <a href="#about" class="block hover:text-blue-600">Tentang</a>
       <a href="#companies" class="block hover:text-blue-600">Perusahaan</a>
       <a href="#services" class="block hover:text-blue-600">Layanan</a>
+      <a href="project-showcase.html" class="block hover:text-blue-600">Project Showcase</a>
       <a href="#contact" class="block hover:text-blue-600">Kontak</a>
     </div>
   </header>
-  
-<section class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center" 
+
+  <!-- Hero Section with Slideshow -->
+<section id="hero"
+  class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center transition-all duration-1000"
   style="background-image: url('plts atambua.jpg');">
-  
   <div class="bg-black bg-opacity-50 p-10 rounded-lg">
     <h2 class="text-5xl font-bold mb-4">Antapura Group</h2>
     <p class="mb-6 text-xl">Empowering Resources for the Future</p>
     <a href="#about" class="bg-white text-blue-700 px-6 py-2 rounded-lg font-semibold">Pelajari Lebih Lanjut</a>
   </div>
 </section>
+
+<script>
+  const hero = document.getElementById("hero");
+  const images = [
+    "plts atambua.jpg",
+    "diperjelas.jpg",
+    "slideshow1.jpg"
+  ];
+  let i = 0;
+
+  // tampilkan gambar pertama langsung
+  hero.style.backgroundImage = `url(${images[0]})`;
+
+  // slideshow
+  setInterval(() => {
+    i = (i + 1) % images.length;
+    hero.style.backgroundImage = `url(${images[i]})`;
+  }, 5000); // ganti setiap 5 detik
+</script>
 
 
   <!-- Tentang Kami -->
@@ -55,24 +82,22 @@
       <h3 class="text-3xl font-bold text-center mb-10">Perusahaan Kami</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-lg shadow-md text-center">
-  <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Energi Indonesia</h4>
-  <img src="Antapuraa.jpg" alt="Logo Antapura Energi Indonesia" class="mx-auto w-80 mb-4">
-  <p>Kami berfokus pada rekayasa modern seperti pengeboran horizontal (HDD), pembangunan jaringan kabel listrik hingga 150 kVA, serta konstruksi sipil pendukung.</p>
-  <a href="AEI.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
-</div>
-
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Energi Indonesia</h4>
+          <img src="Antapuraa.jpg" alt="Logo AEI" class="mx-auto w-80 mb-4">
+          <p>Fokus pada rekayasa modern seperti HDD, jaringan kabel listrik hingga 150 kVA, dan konstruksi sipil pendukung.</p>
+          <a href="AEI.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
+        </div>
         <div class="bg-white p-6 rounded-lg shadow-md text-center">
-  <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Power Resource</h4>
-  <img src="APR.jpg" alt="Logo Antapura Power Resource" class="mx-auto w-80 mb-4">
-  <p>Fokus pada energi terbarukan, minyak, dan gas untuk mendukung ketahanan energi nasional.</p>
-  <a href="APR.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
-</div>
-
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Power Resource</h4>
+          <img src="APR.jpg" alt="Logo APR" class="mx-auto w-80 mb-4">
+          <p>Fokus pada energi terbarukan, minyak, dan gas untuk mendukung ketahanan energi nasional.</p>
+          <a href="APR.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
+        </div>
         <div class="bg-white p-6 rounded-lg shadow-md text-center">
           <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Indonesia Resource</h4>
-		  <img src="diperjelas1.jpg" alt="Logo Antapura Indonesia Resource" class="mx-auto w-80 mb-4">	  
-          <p>Mengembangkan infrastruktur listrik dan pembangkit energi yang ramah lingkungan.</p>
-		  <a href="Aires.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
+          <img src="diperjelas1.jpg" alt="Logo AIR" class="mx-auto w-80 mb-4">	  
+          <p>Mengembangkan infrastruktur listrik dan pembangkit energi ramah lingkungan.</p>
+          <a href="Aires.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
         </div>
       </div>
     </div>
@@ -81,10 +106,6 @@
   <!-- Layanan -->
   <section id="services" class="container mx-auto py-20 text-center">
     <h3 class="text-3xl font-bold mb-6">Layanan Kami</h3>
-    <p class="max-w-2xl mx-auto mb-10">
-      Kami menyediakan layanan terintegrasi di bidang energi, power, dan sumber daya alam, 
-      dengan fokus pada keberlanjutan dan inovasi teknologi.
-    </p>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="p-6 border rounded-lg shadow-sm">
         <h4 class="font-bold mb-2">Energi Terbarukan</h4>
@@ -104,7 +125,7 @@
   <!-- Kontak -->
   <section id="contact" class="bg-blue-700 text-white py-20 text-center">
     <h3 class="text-3xl font-bold mb-6">Hubungi Kami</h3>
-    <p>Email: admin@antapuragroup.com | Telp: (021) 78841477 Fax : (021) 78846383</p>
+    <p>Email: admin@antapuragroup.com | Telp: (021) 78841477 Fax: (021) 78846383</p>
     <p>Alamat: Wisma Raharja Lantai 7, JL.TB Simatupang Kav 1, Cilandak, Jakarta Selatan, 12560</p>
   </section>
 
@@ -113,14 +134,7 @@
     <p>&copy; 2025 Antapura Group. All rights reserved.</p>
   </footer>
 
-  <!-- Script Toggle Mobile Menu -->
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
+  
 
 </body>
 </html>
