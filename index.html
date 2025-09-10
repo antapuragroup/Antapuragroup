@@ -11,9 +11,6 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Heroicons -->
-  <script src="https://unpkg.com/heroicons@2.0.18/dist/heroicons.js"></script>
-
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -32,7 +29,16 @@
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</h1>
+      
+      <!-- Logo + Text -->
+      <a href="/index.html" class="flex items-center space-x-2">
+        <img src="logo-aei.jpg" alt="Logo Antapura" class="h-10 w-auto"> 
+        <span class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition">
+          ANTAPURA GROUP
+        </span>
+      </a>
+
+      <!-- Menu Desktop -->
       <nav class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-600">Tentang</a>
         <a href="#companies" class="hover:text-blue-600">Perusahaan</a>
@@ -40,8 +46,12 @@
         <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
         <a href="#contact" class="hover:text-blue-600">Kontak</a>
       </nav>
+
+      <!-- Tombol Mobile -->
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
     </div>
+
+    <!-- Menu Mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
       <a href="#about" class="block hover:text-blue-600">Tentang</a>
       <a href="#companies" class="block hover:text-blue-600">Perusahaan</a>
@@ -74,9 +84,27 @@
   </script>
 
   <!-- Tentang Kami -->
-  <section id="about" class="container mx-auto py-20 text-center" data-aos="fade-up">
-    <h3 class="text-3xl font-bold mb-6">Tentang Kami</h3>
-    <p class="max-w-3xl mx-auto">
+  <section id="about" class="container mx-auto py-20 text-center px-4" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-8">Tentang Kami</h3>
+
+    <!-- Logo Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 place-items-center mb-10">
+      <div class="flex justify-center">
+        <img src="logo-aei.jpg" alt="Logo AEI" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+      <div class="flex justify-center">
+        <img src="logo-apr.jpg" alt="Logo APR" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+      <div class="flex justify-center">
+        <img src="logo-aires.jpg" alt="Logo AIRES" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+    </div>
+
+    <!-- Paragraf setelah logo -->
+    <p class="max-w-3xl mx-auto mt-8 leading-relaxed text-gray-700">
       Antapura Group adalah perusahaan holding yang bergerak di bidang energi, power, 
       dan sumber daya alam. Kami berkomitmen untuk mendukung pembangunan berkelanjutan 
       melalui inovasi, integritas, dan tanggung jawab sosial.
@@ -110,51 +138,41 @@
     </div>
   </section>
 
-  
   <!-- Layanan -->
-<section id="services" class="container mx-auto py-20 text-center">
-  <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Layanan Kami</h3>
-  <div class="grid md:grid-cols-3 gap-8">
-    
-    <!-- Energi Terbarukan -->
-    <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left">
-      <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mb-4">
-        <!-- Heroicons: Bolt -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10V3L4 14h7v7l10-11h-7z" />
-        </svg>
+  <section id="services" class="container mx-auto py-20 text-center">
+    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Layanan Kami</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10V3L4 14h7v7l10-11h-7z" />
+          </svg>
+        </div>
+        <h4 class="font-bold mb-2">Energi Terbarukan</h4>
+        <p>Pembangunan proyek energi hijau untuk masa depan berkelanjutan.</p>
       </div>
-      <h4 class="font-bold mb-2">Energi Terbarukan</h4>
-      <p>Pembangunan proyek energi hijau untuk masa depan berkelanjutan.</p>
-    </div>
 
-    <!-- Infrastruktur Power -->
-    <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="100">
-      <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mb-4">
-        <!-- Heroicons: Building Office -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M9 8h6m-6 4h6m-6 4h6m-9 0V5a2 2 0 012-2h6a2 2 0 012 2v14" />
-        </svg>
+      <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="100">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M9 8h6m-6 4h6m-6 4h6m-9 0V5a2 2 0 012-2h6a2 2 0 012 2v14" />
+          </svg>
+        </div>
+        <h4 class="font-bold mb-2">Infrastruktur Power</h4>
+        <p>Pembangunan pembangkit listrik dan distribusi energi.</p>
       </div>
-      <h4 class="font-bold mb-2">Infrastruktur Power</h4>
-      <p>Pembangunan pembangkit listrik dan distribusi energi.</p>
-    </div>
 
-    <!-- Mining & Resources -->
-    <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="200">
-      <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-yellow-100 mb-4">
-        <!-- Heroicons: Truck -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16V6a1 1 0 011-1h9l4 5h4a1 1 0 011 1v5h-2m-4 0a2 2 0 11-4 0 2 2 0 014 0zm-10 0a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
+      <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="200">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-yellow-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16V6a1 1 0 011-1h9l4 5h4a1 1 0 011 1v5h-2m-4 0a2 2 0 11-4 0 2 2 0 014 0zm-10 0a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <h4 class="font-bold mb-2">Mining & Resources</h4>
+        <p>Pengelolaan tambang dengan standar internasional dan ramah lingkungan.</p>
       </div>
-      <h4 class="font-bold mb-2">Mining & Resources</h4>
-      <p>Pengelolaan tambang dengan standar internasional dan ramah lingkungan.</p>
     </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- Kontak -->
   <section id="contact" class="bg-blue-700 text-white py-20">
@@ -190,13 +208,16 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
   </a>
 
+  <!-- Script -->
   <script>
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
 
+    // Contact Form
     const form = document.getElementById("contact-form");
     const message = document.getElementById("form-message");
     form.addEventListener("submit", async (e) => {
@@ -223,7 +244,6 @@
       once: true
     });
   </script>
- 
 
 </body>
 </html>

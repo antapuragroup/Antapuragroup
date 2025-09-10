@@ -16,6 +16,9 @@
     html {
       scroll-behavior: smooth;
     }
+    #backToTop {
+      display: none;
+    }
   </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -23,7 +26,7 @@
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</h1>
+      <h1 class="text-2xl font-bold text-blue-700 cursor-pointer" onclick="window.location.href='index.html'">ANTAPURA GROUP</h1>
       <nav class="hidden md:flex space-x-6">
         <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
         <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
@@ -56,31 +59,28 @@
     
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
-        <img src="proyek1-AEI.jpg" alt="Proyek 1" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek1-AEI.jpg" alt="Proyek 1" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
-        <img src="proyek2-AEI.jpg" alt="Proyek 2" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek2-AEI.jpg" alt="Proyek 2" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
-        <img src="proyek3-AEI.jpg" alt="Proyek 3" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek3-AEI.jpg" alt="Proyek 3" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
-        <img src="proyek4-AEI.jpg" alt="Proyek 4" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek4-AEI.jpg" alt="Proyek 4" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
-        <img src="proyek5-AEI.jpg" alt="Proyek 5" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek5-AEI.jpg" alt="Proyek 5" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
-        <img src="proyek6-AEI.jpg" alt="Proyek 6" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek6-AEI.jpg" alt="Proyek 6" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
-        <img src="proyek1-APR.jpg" alt="Proyek 7" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek1-APR.jpg" alt="Proyek 7" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
       <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
-        <img src="proyek2-APR.jpg" alt="Proyek 8" class="w-full h-64 object-cover gallery-img">
-      </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
-        <img src="proyek3-APR.jpg" alt="Proyek 9" class="w-full h-64 object-cover gallery-img">
+        <img src="proyek2-APR.jpg" alt="Proyek 8" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
     </div>
   </section>
@@ -100,6 +100,18 @@
   <footer class="bg-gray-900 text-white py-6 text-center">
     <p>&copy; 2025 Antapura Group. All rights reserved.</p>
   </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/6281234567890" target="_blank" 
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+    <i data-feather="message-circle"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+          class="fixed bottom-20 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+    ↑
+  </button>
 
   <!-- Script -->
   <script>
@@ -169,6 +181,16 @@
 
     // Feather icons
     feather.replace();
+
+    // Back-to-top muncul saat scroll
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
   </script>
 
   <!-- AOS Init -->
