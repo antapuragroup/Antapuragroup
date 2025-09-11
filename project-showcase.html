@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Showcase - Antapura Group</title>
-  <meta name="description" content="Project Showcase Antapura Group - Galeri proyek energi, power, dan sumber daya alam.">
-  <meta name="keywords" content="Antapura Group, Energi, Power, Resources, Project Showcase">
+  <title>Antapura Group - Project Showcase</title>
+  <meta name="description" content="Project Showcase Antapura Group - Menampilkan berbagai proyek energi, power, dan sumber daya alam.">
+  <meta name="keywords" content="Antapura Group, Project Showcase, Energi, Power, Infrastruktur, Proyek">
   <meta name="author" content="Antapura Group">
 
   <!-- Security Headers -->
@@ -28,11 +28,110 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-    #backToTop { display: none; }
-  </style>
+  <style> html { scroll-behavior: smooth; } </style>
 </head>
-
 <body class="font-sans text-gray-800">
 
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html#hero" class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
+        <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
+        <a href="index.html#services" class="hover:text-blue-600">Layanan</a>
+        <a href="project-showcase.html" class="hover:text-blue-600 font-semibold">Project Showcase</a>
+        <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
+      <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
+      <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
+      <a href="index.html#services" class="block hover:text-blue-600">Layanan</a>
+      <a href="project-showcase.html" class="block hover:text-blue-600 font-semibold">Project Showcase</a>
+      <a href="index.html#contact" class="block hover:text-blue-600">Kontak</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="h-72 flex items-center justify-center bg-blue-700 text-white text-center mt-16" data-aos="fade-up">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">Project Showcase</h2>
+      <p class="text-lg">Menampilkan Proyek Unggulan Antapura Group</p>
+    </div>
+  </section>
+
+  <!-- Konten -->
+  <section class="container mx-auto pt-20 pb-20">
+    <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Proyek Kami</h2>
+
+    <!-- Grid Project -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Project Card -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in">
+        <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Proyek Energi Baru</h3>
+          <p class="text-gray-600">Pengembangan energi terbarukan skala besar.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+        <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Infrastruktur Power</h3>
+          <p class="text-gray-600">Pembangunan infrastruktur tenaga listrik nasional.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+        <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Eksplorasi Sumber Daya</h3>
+          <p class="text-gray-600">Eksplorasi dan pengelolaan sumber daya alam.</p>
+        </div>
+      </div>
+
+      <!-- Tambah proyek lain -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+        <img src="project4.jpg" alt="Project 4" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Pembangkit Listrik</h3>
+          <p class="text-gray-600">Proyek pembangunan pembangkit listrik ramah lingkungan.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+        <img src="project5.jpg" alt="Project 5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Konstruksi Gas</h3>
+          <p class="text-gray-600">Infrastruktur distribusi gas nasional.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="500">
+        <img src="project6.jpg" alt="Project 6" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-blue-700">Energi Surya</h3>
+          <p class="text-gray-600">Pembangunan panel surya untuk energi terbarukan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Antapura Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    feather.replace();
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
