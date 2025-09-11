@@ -7,44 +7,21 @@
   <meta name="description" content="Visi & Misi Antapura Power Resource (APR) - Perusahaan energi baru & terbarukan berskala nasional dan internasional.">
   <meta name="keywords" content="Antapura Power Resource, APR, Energi Baru, Energi Terbarukan, Renewable Energy">
   <meta name="author" content="Antapura Group">
-
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; 
-                 img-src 'self' data: https:; 
-                 script-src 'self' https://cdn.tailwindcss.com https://unpkg.com 'unsafe-inline'; 
-                 style-src 'self' 'unsafe-inline' https://unpkg.com; 
-                 font-src 'self' https://unpkg.com data:;">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Feather Icons -->
+  <!-- Heroicons -->
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
   <style>
     html { scroll-behavior: smooth; }
   </style>
 </head>
-
 <body class="font-sans text-gray-800">
 
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <!-- Logo -->
-      <a href="index.html#hero" class="flex items-center space-x-2">
-        <span class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition">
-          ANTAPURA GROUP
-        </span>
-      </a>
-      <!-- Menu Desktop -->
+      <h1 class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</h1>
       <nav class="hidden md:flex space-x-6">
         <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
         <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
@@ -52,10 +29,8 @@
         <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
         <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
       </nav>
-      <!-- Tombol Mobile -->
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
     </div>
-    <!-- Menu Mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
       <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
       <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
@@ -76,6 +51,7 @@
   <!-- Konten -->
   <section class="container mx-auto pt-20 pb-20 text-center">
     <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Visi & Misi</h2>
+    
     <div class="max-w-3xl mx-auto text-left space-y-6">
       <!-- Visi -->
       <div data-aos="fade-up" data-aos-delay="100">
@@ -84,6 +60,7 @@
           <li>Menjadi perusahaan berskala nasional dan internasional di bidang Energi Baru dan Terbarukan.</li>
         </ul>
       </div>
+
       <!-- Misi -->
       <div data-aos="fade-up" data-aos-delay="200">
         <h3 class="text-xl font-semibold mb-2 text-blue-700">Misi</h3>
@@ -117,16 +94,19 @@
   <!-- Script -->
   <script>
     // Toggle menu mobile
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
     });
 
     // Feather icons
     feather.replace();
+  </script>
 
-    // AOS Init
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
     AOS.init({
       duration: 1000,
       once: true

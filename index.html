@@ -8,29 +8,20 @@
   <meta name="keywords" content="Antapura Group, Energi, Power, Sumber Daya Alam, Infrastruktur, Mining, Renewable Energy">
   <meta name="author" content="Antapura Group">
 
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self';
-                 img-src 'self' data: https:;
-                 script-src 'self' https://cdn.tailwindcss.com https://unpkg.com 'unsafe-inline';
-                 style-src 'self' 'unsafe-inline' https://unpkg.com;
-                 font-src 'self' https://unpkg.com data:;">
-
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
-    html { scroll-behavior: smooth; }
-    .hero { transition: background-image 1s ease-in-out; }
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero {
+      transition: background-image 1s ease-in-out;
+    }
   </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -38,7 +29,16 @@
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-700 cursor-pointer" onclick="window.location.href='index.html#hero'">ANTAPURA GROUP</h1>
+      
+      <!-- Logo + Text -->
+      <a href="/index.html" class="flex items-center space-x-2">
+        <img src="logo-aei.jpg" alt="Logo Antapura" class="h-10 w-auto"> 
+        <span class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition">
+          ANTAPURA GROUP
+        </span>
+      </a>
+
+      <!-- Menu Desktop -->
       <nav class="hidden md:flex space-x-6">
         <a href="#about" class="hover:text-blue-600">Tentang</a>
         <a href="#companies" class="hover:text-blue-600">Perusahaan</a>
@@ -46,8 +46,12 @@
         <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
         <a href="#contact" class="hover:text-blue-600">Kontak</a>
       </nav>
+
+      <!-- Tombol Mobile -->
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
     </div>
+
+    <!-- Menu Mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
       <a href="#about" class="block hover:text-blue-600">Tentang</a>
       <a href="#companies" class="block hover:text-blue-600">Perusahaan</a>
@@ -57,44 +61,78 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="h-screen flex items-center justify-center text-center text-white bg-cover bg-center hero" 
-           style="background-image: url('hero1.jpg');">
-    <div data-aos="fade-up">
-      <h2 class="text-5xl font-bold mb-4 drop-shadow-lg">Selamat Datang di Antapura Group</h2>
-      <p class="text-lg mb-6 drop-shadow">Perusahaan holding di bidang energi, power, dan sumber daya alam</p>
-      <a href="#about" class="bg-blue-600 px-6 py-3 rounded-lg text-white font-semibold hover:bg-blue-700 transition">Pelajari Lebih Lanjut</a>
+  <!-- Hero Section with Slideshow -->
+  <section id="hero"
+    class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center transition-all duration-1000"
+    style="background-image: url('plts-atambua.jpg');">
+    <div class="bg-black bg-opacity-50 p-10 rounded-lg" data-aos="fade-up">
+      <h2 class="text-5xl font-bold mb-4">Antapura Group</h2>
+      <p class="mb-6 text-xl">Empowering Resources for the Future</p>
+      <a href="#about" class="bg-white text-blue-700 px-6 py-2 rounded-lg font-semibold">Pelajari Lebih Lanjut</a>
     </div>
   </section>
 
-  <!-- Tentang -->
-  <section id="about" class="container mx-auto py-20 text-center">
-    <h3 class="text-3xl font-bold mb-6 text-blue-700" data-aos="fade-up">Tentang Kami</h3>
-    <p class="max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
-      Antapura Group adalah perusahaan holding yang fokus pada energi, power, infrastruktur, dan sumber daya alam. 
-      Kami berkomitmen menghadirkan solusi inovatif dan berkelanjutan.
+  <script>
+    const hero = document.getElementById("hero");
+    const images = ["plts-atambua.jpg","diperjelas.jpg","slideshow1.jpg"];
+    let i = 0;
+    hero.style.backgroundImage = `url(${images[0]})`;
+    setInterval(() => {
+      i = (i + 1) % images.length;
+      hero.style.backgroundImage = `url(${images[i]})`;
+    }, 5000);
+  </script>
+
+  <!-- Tentang Kami -->
+  <section id="about" class="container mx-auto py-20 text-center px-4" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-8">Tentang Kami</h3>
+
+    <!-- Logo Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 place-items-center mb-10">
+      <div class="flex justify-center">
+        <img src="logo-aei.jpg" alt="Logo AEI" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+      <div class="flex justify-center">
+        <img src="logo-apr.jpg" alt="Logo APR" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+      <div class="flex justify-center">
+        <img src="logo-aires.jpg" alt="Logo AIRES" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+    </div>
+
+    <!-- Paragraf setelah logo -->
+    <p class="max-w-3xl mx-auto mt-8 leading-relaxed text-gray-700">
+      Antapura Group adalah perusahaan holding yang bergerak di bidang energi, power, 
+      dan sumber daya alam. Kami berkomitmen untuk mendukung pembangunan berkelanjutan 
+      melalui inovasi, integritas, dan tanggung jawab sosial.
     </p>
   </section>
 
-  <!-- Perusahaan -->
+  <!-- Perusahaan Kami -->
   <section id="companies" class="bg-gray-100 py-20">
-    <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-10 text-blue-700" data-aos="fade-up">Perusahaan Kami</h3>
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Perusahaan Kami</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
-          <h4 class="text-xl font-bold mb-2">Antapura Energi Indonesia</h4>
-          <p class="text-gray-600 mb-4">Spesialis konstruksi minyak, gas, HDD, dan kabel listrik.</p>
-          <a href="aei.html" class="text-blue-600 hover:underline">Selengkapnya</a>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="zoom-in">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Energi Indonesia</h4>
+          <img src="Antapuraa.jpg" alt="Logo AEI" class="mx-auto w-80 mb-4">
+          <p>Fokus pada rekayasa modern seperti HDD, jaringan kabel listrik hingga 150 kVA, dan konstruksi sipil pendukung.</p>
+          <a href="AEI.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-          <h4 class="text-xl font-bold mb-2">Antapura Power Resource</h4>
-          <p class="text-gray-600 mb-4">Energi baru & terbarukan skala nasional & internasional.</p>
-          <a href="apr.html" class="text-blue-600 hover:underline">Selengkapnya</a>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Power Resource</h4>
+          <img src="APR.jpg" alt="Logo APR" class="mx-auto w-80 mb-4">
+          <p>Fokus pada energi terbarukan, minyak, dan gas untuk mendukung ketahanan energi nasional.</p>
+          <a href="APR.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
-          <h4 class="text-xl font-bold mb-2">Antapura Indonesia Resource</h4>
-          <p class="text-gray-600 mb-4">Energi berkelanjutan & ramah lingkungan.</p>
-          <a href="aires.html" class="text-blue-600 hover:underline">Selengkapnya</a>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="zoom-in" data-aos-delay="200">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Antapura Indonesia Resource</h4>
+          <img src="diperjelas1.jpg" alt="Logo AIR" class="mx-auto w-80 mb-4">	  
+          <p>Mengembangkan infrastruktur listrik dan pembangkit energi ramah lingkungan.</p>
+          <a href="Aires.html" class="text-blue-600 font-semibold mt-4 inline-block">Lihat Visi & Misi →</a>
         </div>
       </div>
     </div>
@@ -102,31 +140,61 @@
 
   <!-- Layanan -->
   <section id="services" class="container mx-auto py-20 text-center">
-    <h3 class="text-3xl font-bold mb-10 text-blue-700" data-aos="fade-up">Layanan Kami</h3>
+    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Layanan Kami</h3>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="fade-up">
-        <i data-feather="zap" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
-        <h4 class="text-xl font-bold mb-2">Energi</h4>
-        <p class="text-gray-600">Solusi energi baru, terbarukan, dan konvensional.</p>
+      <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10V3L4 14h7v7l10-11h-7z" />
+          </svg>
+        </div>
+        <h4 class="font-bold mb-2">Energi Terbarukan</h4>
+        <p>Pembangunan proyek energi hijau untuk masa depan berkelanjutan.</p>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-        <i data-feather="package" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
-        <h4 class="text-xl font-bold mb-2">Infrastruktur</h4>
-        <p class="text-gray-600">Pembangunan infrastruktur energi & kelistrikan.</p>
+
+      <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="100">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M9 8h6m-6 4h6m-6 4h6m-9 0V5a2 2 0 012-2h6a2 2 0 012 2v14" />
+          </svg>
+        </div>
+        <h4 class="font-bold mb-2">Infrastruktur Power</h4>
+        <p>Pembangunan pembangkit listrik dan distribusi energi.</p>
       </div>
-      <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-        <i data-feather="globe" class="w-12 h-12 text-blue-600 mx-auto mb-4"></i>
-        <h4 class="text-xl font-bold mb-2">Sumber Daya Alam</h4>
-        <p class="text-gray-600">Pengelolaan SDA secara berkelanjutan.</p>
+
+      <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="200">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-yellow-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16V6a1 1 0 011-1h9l4 5h4a1 1 0 011 1v5h-2m-4 0a2 2 0 11-4 0 2 2 0 014 0zm-10 0a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <h4 class="font-bold mb-2">Mining & Resources</h4>
+        <p>Pengelolaan tambang dengan standar internasional dan ramah lingkungan.</p>
       </div>
     </div>
   </section>
 
   <!-- Kontak -->
-  <section id="contact" class="bg-blue-700 text-white py-20 text-center">
-    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Kontak Kami</h3>
-    <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Hubungi kami untuk informasi lebih lanjut.</p>
-    <a href="mailto:info@antapuragroup.com" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Email Kami</a>
+  <section id="contact" class="bg-blue-700 text-white py-20">
+    <div class="container mx-auto text-center" data-aos="fade-up">
+      <h3 class="text-3xl font-bold mb-6">Hubungi Kami</h3>
+      <form id="contact-form" action="https://formspree.io/f/mblawkqy" method="POST"
+        class="max-w-xl mx-auto space-y-4 bg-white p-6 rounded-lg shadow-lg text-gray-800">
+        <input type="text" name="nama" placeholder="Nama" required class="w-full p-3 border rounded-lg" />
+        <input type="email" name="email" placeholder="Email" required class="w-full p-3 border rounded-lg" />
+        <textarea name="pesan" rows="4" placeholder="Pesan" required class="w-full p-3 border rounded-lg"></textarea>
+        <button type="submit" class="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
+          Kirim Pesan
+        </button>
+        <p id="form-message" class="text-green-600 font-semibold hidden mt-4">✅ Terima kasih, pesan Anda sudah terkirim.</p>
+      </form>
+
+      <div class="mt-8">
+        <p>Email: <a href="mailto:admin@antapuragroup.com" class="underline">admin@antapuragroup.com</a></p>
+        <p>Telp: (021) 78841477 | Fax: (021) 78846383</p>
+        <p>Alamat: Wisma Raharja Lantai 7, JL. TB Simatupang Kav 1, Cilandak, Jakarta Selatan, 12560</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -134,29 +202,47 @@
     <p>&copy; 2025 Antapura Group. All rights reserved.</p>
   </footer>
 
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6281990890880?text=Halo%20admin%20saya%20mau%20tanya%20tentang%20layanan%20Antapura%20Group" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
+  </a>
+
   <!-- Script -->
   <script>
-    // Toggle menu mobile
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
 
-    // Hero background slider
-    const hero = document.querySelector(".hero");
-    const images = ["hero1.jpg", "hero2.jpg", "hero3.jpg"];
-    let index = 0;
-    setInterval(() => {
-      index = (index + 1) % images.length;
-      hero.style.backgroundImage = `url('${images[index]}')`;
-    }, 5000);
+    // Contact Form
+    const form = document.getElementById("contact-form");
+    const message = document.getElementById("form-message");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        message.classList.remove("hidden");
+        form.reset();
+      } else {
+        message.textContent = "❌ Terjadi kesalahan, coba lagi.";
+        message.classList.remove("hidden");
+        message.classList.replace("text-green-600", "text-red-600");
+      }
+    });
 
-    // Feather icons
-    feather.replace();
-
-    // AOS init
-    AOS.init({ duration: 1000, once: true });
+    // Init AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   </script>
 
 </body>
