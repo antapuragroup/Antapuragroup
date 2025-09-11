@@ -14,22 +14,88 @@
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; font-src 'self' https://unpkg.com;">
+        content="default-src 'self'; 
+                 img-src 'self' data: https:; 
+                 script-src 'self' https://cdn.tailwindcss.com https://unpkg.com 'unsafe-inline'; 
+                 style-src 'self' 'unsafe-inline' https://unpkg.com; 
+                 font-src 'self' https://unpkg.com data:;">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
 
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .hero {
-      transition: background-image 1s ease-in-out;
-    }
+    html { scroll-behavior: smooth; }
+    .hero { transition: background-image 1s ease-in-out; }
   </style>
 </head>
 <body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <a href="index.html#hero" class="flex items-center space-x-2">
+        <span class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition">ANTAPURA GROUP</span>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
+        <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
+        <a href="index.html#services" class="hover:text-blue-600">Layanan</a>
+        <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
+        <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
+      </nav>
+
+      <!-- Tombol Mobile -->
+      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
+      <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
+      <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
+      <a href="index.html#services" class="block hover:text-blue-600">Layanan</a>
+      <a href="project-showcase.html" class="block hover:text-blue-600">Project Showcase</a>
+      <a href="index.html#contact" class="block hover:text-blue-600">Kontak</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen flex items-center justify-center bg-blue-700 text-white text-center" data-aos="fade-up">
+    <div>
+      <h1 class="text-5xl font-bold mb-4">Selamat Datang di Antapura Group</h1>
+      <p class="text-lg">Holding Company di bidang Energi, Power, dan Sumber Daya Alam</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 Antapura Group. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Toggle menu mobile
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Feather icons
+    feather.replace();
+
+    // AOS init
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+</body>
+</html>
