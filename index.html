@@ -29,6 +29,8 @@
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
+      
+      <!-- Logo + Text (UPDATED) -->
       <a href="index.html#hero" class="flex items-center space-x-2">
         <img src="logo-aei.jpg" alt="Logo Antapura" class="h-10 w-auto"> 
         <span class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition">
@@ -61,7 +63,7 @@
 
   <!-- Hero Section with Slideshow -->
   <section id="hero"
-    class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center hero"
+    class="h-screen flex items-center justify-center bg-cover bg-center text-white text-center transition-all duration-1000"
     style="background-image: url('plts-atambua.jpg');">
     <div class="bg-black bg-opacity-50 p-10 rounded-lg" data-aos="fade-up">
       <h2 class="text-5xl font-bold mb-4">Antapura Group</h2>
@@ -70,14 +72,38 @@
     </div>
   </section>
 
+  <script>
+    const hero = document.getElementById("hero");
+    const images = ["plts-atambua.jpg","diperjelas.jpg","slideshow1.jpg"];
+    let i = 0;
+    hero.style.backgroundImage = `url(${images[0]})`;
+    setInterval(() => {
+      i = (i + 1) % images.length;
+      hero.style.backgroundImage = `url(${images[i]})`;
+    }, 5000);
+  </script>
+
   <!-- Tentang Kami -->
   <section id="about" class="container mx-auto py-20 text-center px-4" data-aos="fade-up">
     <h3 class="text-3xl font-bold mb-8">Tentang Kami</h3>
+
+    <!-- Logo Section -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 place-items-center mb-10">
-      <img src="logo-aei.jpg" alt="Logo AEI" class="h-16 object-contain hover:scale-110 transition transform rounded-xl shadow">
-      <img src="logo-apr.jpg" alt="Logo APR" class="h-16 object-contain hover:scale-110 transition transform rounded-xl shadow">
-      <img src="logo-aires.jpg" alt="Logo AIRES" class="h-16 object-contain hover:scale-110 transition transform rounded-xl shadow">
+      <div class="flex justify-center">
+        <img src="logo-aei.jpg" alt="Logo AEI" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+      <div class="flex justify-center">
+        <img src="logo-apr.jpg" alt="Logo APR" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
+      <div class="flex justify-center">
+        <img src="logo-aires.jpg" alt="Logo AIRES" 
+             class="h-14 sm:h-16 md:h-20 object-contain transform transition duration-300 hover:scale-110 hover:shadow-xl rounded-xl">
+      </div>
     </div>
+
+    <!-- Paragraf setelah logo -->
     <p class="max-w-3xl mx-auto mt-8 leading-relaxed text-gray-700">
       Antapura Group adalah perusahaan holding yang bergerak di bidang energi, power, 
       dan sumber daya alam. Kami berkomitmen untuk mendukung pembangunan berkelanjutan 
@@ -85,7 +111,7 @@
     </p>
   </section>
 
-  <!-- Perusahaan -->
+  <!-- Perusahaan Kami -->
   <section id="companies" class="bg-gray-100 py-20">
     <div class="container mx-auto">
       <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">Perusahaan Kami</h3>
@@ -117,14 +143,31 @@
     <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Layanan Kami</h3>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10V3L4 14h7v7l10-11h-7z" />
+          </svg>
+        </div>
         <h4 class="font-bold mb-2">Energi Terbarukan</h4>
         <p>Pembangunan proyek energi hijau untuk masa depan berkelanjutan.</p>
       </div>
+
       <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="100">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M9 8h6m-6 4h6m-6 4h6m-9 0V5a2 2 0 012-2h6a2 2 0 012 2v14" />
+          </svg>
+        </div>
         <h4 class="font-bold mb-2">Infrastruktur Power</h4>
         <p>Pembangunan pembangkit listrik dan distribusi energi.</p>
       </div>
+
       <div class="p-6 border rounded-lg shadow-sm" data-aos="flip-left" data-aos-delay="200">
+        <div class="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-yellow-100 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 16V6a1 1 0 011-1h9l4 5h4a1 1 0 011 1v5h-2m-4 0a2 2 0 11-4 0 2 2 0 014 0zm-10 0a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
         <h4 class="font-bold mb-2">Mining & Resources</h4>
         <p>Pengelolaan tambang dengan standar internasional dan ramah lingkungan.</p>
       </div>
@@ -145,6 +188,7 @@
         </button>
         <p id="form-message" class="text-green-600 font-semibold hidden mt-4">✅ Terima kasih, pesan Anda sudah terkirim.</p>
       </form>
+
       <div class="mt-8">
         <p>Email: <a href="mailto:admin@antapuragroup.com" class="underline">admin@antapuragroup.com</a></p>
         <p>Telp: (021) 78841477 | Fax: (021) 78846383</p>
@@ -158,31 +202,22 @@
     <p>&copy; 2025 Antapura Group. All rights reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
+  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/6281990890880?text=Halo%20admin%20saya%20mau%20tanya%20tentang%20layanan%20Antapura%20Group" target="_blank"
     class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8">
   </a>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script>
-    // Mobile menu toggle
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
     });
 
-    // Hero slideshow
-    const hero = document.getElementById("hero");
-    const images = ["plts-atambua.jpg","diperjelas.jpg","slideshow1.jpg"];
-    let i = 0;
-    setInterval(() => {
-      i = (i + 1) % images.length;
-      hero.style.backgroundImage = `url(${images[i]})`;
-    }, 5000);
-
-    // Contact form
+    // Contact Form
     const form = document.getElementById("contact-form");
     const message = document.getElementById("form-message");
     form.addEventListener("submit", async (e) => {
