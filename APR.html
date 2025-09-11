@@ -4,80 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antapura Power Resource - Visi & Misi</title>
-  <meta name="description" content="Visi & Misi Antapura Power Resource (APR) - Solusi tenaga listrik dan power infrastructure.">
-  <meta name="keywords" content="Antapura Power Resource, APR, Power, Energi, Infrastruktur, Listrik">
+  <meta name="description" content="Visi & Misi Antapura Power Resource (APR) - Perusahaan energi baru & terbarukan berskala nasional dan internasional.">
+  <meta name="keywords" content="Antapura Power Resource, APR, Energi Baru, Energi Terbarukan, Renewable Energy">
   <meta name="author" content="Antapura Group">
-
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; 
-                 img-src 'self' data: https:; 
-                 script-src 'self' https://cdn.tailwindcss.com https://unpkg.com 'unsafe-inline'; 
-                 style-src 'self' 'unsafe-inline' https://unpkg.com; 
-                 font-src 'self' https://unpkg.com data:;">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Feather Icons -->
+  <!-- Heroicons -->
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <style> html { scroll-behavior: smooth; } </style>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
 
   <!-- Navbar -->
-  <header class="bg-white shadow-md fixed w-full z-10">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="index.html#hero" class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
-        <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
-        <a href="index.html#services" class="hover:text-blue-600">Layanan</a>
-        <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
-        <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
-      </nav>
-      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
-      <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
-      <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
-      <a href="index.html#services" class="block hover:text-blue-600">Layanan</a>
-      <a href="project-showcase.html" class="block hover:text-blue-600">Project Showcase</a>
-      <a href="index.html#contact" class="block hover:text-blue-600">Kontak</a>
-    </div>
-  </header>
+<header class="bg-white shadow-md fixed w-full z-10">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    
+    <!-- Logo (klik balik ke hero index.html) -->
+    <a href="index.html#hero" class="flex items-center space-x-2">
+      <span class="text-2xl font-bold text-blue-700 hover:text-blue-900 transition">
+        ANTAPURA GROUP
+      </span>
+    </a>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
+      <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
+      <a href="index.html#services" class="hover:text-blue-600">Layanan</a>
+      <a href="project-showcase.html" class="hover:text-blue-600">Project Showcase</a>
+      <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
+    </nav>
+
+    <!-- Tombol Mobile -->
+    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white p-4 space-y-2 shadow">
+    <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
+    <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
+    <a href="index.html#services" class="block hover:text-blue-600">Layanan</a>
+    <a href="project-showcase.html" class="block hover:text-blue-600">Project Showcase</a>
+    <a href="index.html#contact" class="block hover:text-blue-600">Kontak</a>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="h-72 flex items-center justify-center bg-blue-700 text-white text-center mt-16" data-aos="fade-up">
     <div>
       <h2 class="text-4xl font-bold mb-4">Antapura Power Resource</h2>
-      <p class="text-lg">Visi & Misi - Solusi Infrastruktur Power</p>
+      <p class="text-lg">Visi & Misi - Energi Baru & Terbarukan</p>
     </div>
   </section>
 
   <!-- Konten -->
   <section class="container mx-auto pt-20 pb-20 text-center">
     <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Visi & Misi</h2>
+    
     <div class="max-w-3xl mx-auto text-left space-y-6">
-      <div data-aos="fade-up">
+      <!-- Visi -->
+      <div data-aos="fade-up" data-aos-delay="100">
         <h3 class="text-xl font-semibold mb-2 text-blue-700">Visi</h3>
         <ul class="list-disc pl-6 space-y-2">
-          <li>Menjadi perusahaan terdepan dalam penyediaan solusi tenaga listrik dan infrastruktur power di Indonesia.</li>
+          <li>Menjadi perusahaan berskala nasional dan internasional di bidang Energi Baru dan Terbarukan.</li>
         </ul>
       </div>
-      <div data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Misi -->
+      <div data-aos="fade-up" data-aos-delay="200">
         <h3 class="text-xl font-semibold mb-2 text-blue-700">Misi</h3>
         <ul class="list-disc pl-6 space-y-2">
-          <li>Menyediakan layanan power yang handal, efisien, dan ramah lingkungan.</li>
-          <li>Mendukung pembangunan infrastruktur energi nasional.</li>
-          <li>Mengembangkan teknologi dan inovasi dalam bidang tenaga listrik.</li>
+          <li>Menjadikan mitra bisnis dan pelanggan sebagai prioritas utama dengan menyediakan produk dan layanan berkualitas.</li>
+          <li>Membangun bisnis yang unggul, berdaya saing, dan kompeten.</li>
+          <li>Berinovasi untuk produk dan layanan yang dapat memenuhi kebutuhan konsumen dengan lebih baik.</li>
         </ul>
       </div>
     </div>
@@ -88,6 +91,11 @@
       <img src="CC1-APR.jpg" alt="Cooperation 1" class="w-full rounded-lg shadow-md">
       <img src="CC2-APR.jpg" alt="Cooperation 2" class="w-full rounded-lg shadow-md">
       <img src="CC3-APR.jpg" alt="Cooperation 3" class="w-full rounded-lg shadow-md">
+      <img src="CC4-APR.jpg" alt="Cooperation 4" class="w-full rounded-lg shadow-md">
+      <img src="CC5-APR.jpg" alt="Cooperation 5" class="w-full rounded-lg shadow-md">
+      <img src="CC6-APR.jpg" alt="Cooperation 6" class="w-full rounded-lg shadow-md">
+      <img src="CC7-APR.jpg" alt="Cooperation 7" class="w-full rounded-lg shadow-md">
+      <img src="CC8-APR.jpg" alt="Cooperation 8" class="w-full rounded-lg shadow-md">
     </div>
   </section>
 
@@ -98,11 +106,25 @@
 
   <!-- Script -->
   <script>
+    // Toggle menu mobile
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Feather icons
     feather.replace();
-    AOS.init({ duration: 1000, once: true });
   </script>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
 </body>
 </html>

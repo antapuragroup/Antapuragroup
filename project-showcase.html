@@ -3,44 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antapura Group - Project Showcase</title>
-  <meta name="description" content="Project Showcase Antapura Group - Menampilkan berbagai proyek energi, power, dan sumber daya alam.">
-  <meta name="keywords" content="Antapura Group, Project Showcase, Energi, Power, Infrastruktur, Proyek">
+  <title>Project Showcase - Antapura Group</title>
+  <meta name="description" content="Project Showcase Antapura Group - Galeri proyek energi, power, dan sumber daya alam.">
+  <meta name="keywords" content="Antapura Group, Energi, Power, Resources, Project Showcase">
   <meta name="author" content="Antapura Group">
-
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; 
-                 img-src 'self' data: https:; 
-                 script-src 'self' https://cdn.tailwindcss.com https://unpkg.com 'unsafe-inline'; 
-                 style-src 'self' 'unsafe-inline' https://unpkg.com; 
-                 font-src 'self' https://unpkg.com data:;">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Feather Icons -->
+  <!-- Heroicons -->
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <style> html { scroll-behavior: smooth; } </style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #backToTop {
+      display: none;
+    }
+  </style>
 </head>
 <body class="font-sans text-gray-800">
 
   <!-- Navbar -->
   <header class="bg-white shadow-md fixed w-full z-10">
     <div class="container mx-auto flex justify-between items-center p-4">
-      <a href="index.html#hero" class="text-2xl font-bold text-blue-700">ANTAPURA GROUP</a>
+      <h1 class="text-2xl font-bold text-blue-700 cursor-pointer" onclick="window.location.href='index.html'">ANTAPURA GROUP</h1>
       <nav class="hidden md:flex space-x-6">
         <a href="index.html#about" class="hover:text-blue-600">Tentang</a>
         <a href="index.html#companies" class="hover:text-blue-600">Perusahaan</a>
         <a href="index.html#services" class="hover:text-blue-600">Layanan</a>
-        <a href="project-showcase.html" class="hover:text-blue-600 font-semibold">Project Showcase</a>
+        <a href="project-showcase.html" class="hover:text-blue-600 font-bold">Project Showcase</a>
         <a href="index.html#contact" class="hover:text-blue-600">Kontak</a>
       </nav>
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
@@ -49,7 +40,7 @@
       <a href="index.html#about" class="block hover:text-blue-600">Tentang</a>
       <a href="index.html#companies" class="block hover:text-blue-600">Perusahaan</a>
       <a href="index.html#services" class="block hover:text-blue-600">Layanan</a>
-      <a href="project-showcase.html" class="block hover:text-blue-600 font-semibold">Project Showcase</a>
+      <a href="project-showcase.html" class="block hover:text-blue-600 font-bold">Project Showcase</a>
       <a href="index.html#contact" class="block hover:text-blue-600">Kontak</a>
     </div>
   </header>
@@ -58,80 +49,158 @@
   <section class="h-72 flex items-center justify-center bg-blue-700 text-white text-center mt-16" data-aos="fade-up">
     <div>
       <h2 class="text-4xl font-bold mb-4">Project Showcase</h2>
-      <p class="text-lg">Menampilkan Proyek Unggulan Antapura Group</p>
+      <p class="text-lg">Galeri proyek dan pencapaian Antapura Group</p>
     </div>
   </section>
 
-  <!-- Konten -->
-  <section class="container mx-auto pt-20 pb-20">
-    <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Proyek Kami</h2>
-
-    <!-- Grid Project -->
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Project Card -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in">
-        <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Proyek Energi Baru</h3>
-          <p class="text-gray-600">Pengembangan energi terbarukan skala besar.</p>
-        </div>
+  <!-- Galeri Proyek -->
+  <section class="container mx-auto py-20">
+    <h3 class="text-3xl font-bold text-center text-blue-700 mb-10" data-aos="fade-up">Galeri Proyek</h3>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
+        <img src="proyek1-AEI.jpg" alt="Proyek 1" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
-        <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Infrastruktur Power</h3>
-          <p class="text-gray-600">Pembangunan infrastruktur tenaga listrik nasional.</p>
-        </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+        <img src="proyek2-AEI.jpg" alt="Proyek 2" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
-        <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Eksplorasi Sumber Daya</h3>
-          <p class="text-gray-600">Eksplorasi dan pengelolaan sumber daya alam.</p>
-        </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+        <img src="proyek3-AEI.jpg" alt="Proyek 3" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
-
-      <!-- Tambah proyek lain -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
-        <img src="project4.jpg" alt="Project 4" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Pembangkit Listrik</h3>
-          <p class="text-gray-600">Proyek pembangunan pembangkit listrik ramah lingkungan.</p>
-        </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
+        <img src="proyek4-AEI.jpg" alt="Proyek 4" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
-        <img src="project5.jpg" alt="Project 5" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Konstruksi Gas</h3>
-          <p class="text-gray-600">Infrastruktur distribusi gas nasional.</p>
-        </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+        <img src="proyek5-AEI.jpg" alt="Proyek 5" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="zoom-in" data-aos-delay="500">
-        <img src="project6.jpg" alt="Project 6" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2 text-blue-700">Energi Surya</h3>
-          <p class="text-gray-600">Pembangunan panel surya untuk energi terbarukan.</p>
-        </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+        <img src="proyek6-AEI.jpg" alt="Proyek 6" class="w-full h-64 object-cover gallery-img" loading="lazy">
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in">
+        <img src="proyek1-APR.jpg" alt="Proyek 7" class="w-full h-64 object-cover gallery-img" loading="lazy">
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+        <img src="proyek2-APR.jpg" alt="Proyek 8" class="w-full h-64 object-cover gallery-img" loading="lazy">
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <!-- Tombol close -->
+    <span class="absolute top-6 right-8 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <!-- Tombol navigasi -->
+    <span class="absolute left-6 text-white text-4xl cursor-pointer select-none" onclick="prevImage()">&#10094;</span>
+    <span class="absolute right-6 text-white text-4xl cursor-pointer select-none" onclick="nextImage()">&#10095;</span>
+    <!-- Gambar -->
+    <img id="modalImage" class="max-w-3xl max-h-[90vh] rounded-lg shadow-lg transform transition duration-300 opacity-0 scale-95">
+  </div>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6 text-center">
     <p>&copy; 2025 Antapura Group. All rights reserved.</p>
   </footer>
 
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/6281234567890" target="_blank" 
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+    <i data-feather="message-circle"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+          class="fixed bottom-20 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+    ↑
+  </button>
+
   <!-- Script -->
   <script>
+    // Toggle menu mobile
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Galeri dan modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const galleryImgs = document.querySelectorAll(".gallery-img");
+    let currentIndex = 0;
+
+    galleryImgs.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        openModal(index);
+      });
+    });
+
+    function openModal(index) {
+      currentIndex = index;
+      modal.classList.remove("hidden");
+      modalImg.src = galleryImgs[currentIndex].src;
+      setTimeout(() => {
+        modalImg.classList.remove("opacity-0", "scale-95");
+        modalImg.classList.add("opacity-100", "scale-100");
+      }, 50);
+    }
+
+    function closeModal() {
+      modalImg.classList.remove("opacity-100", "scale-100");
+      modalImg.classList.add("opacity-0", "scale-95");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        modalImg.src = "";
+      }, 300);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % galleryImgs.length;
+      modalImg.src = galleryImgs[currentIndex].src;
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+      modalImg.src = galleryImgs[currentIndex].src;
+    }
+
+    // Tutup modal kalau klik area luar
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Navigasi keyboard
+    document.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("hidden")) {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+      }
+    });
+
+    // Feather icons
     feather.replace();
-    AOS.init({ duration: 1000, once: true });
+
+    // Back-to-top muncul saat scroll
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
   </script>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
 </body>
 </html>
