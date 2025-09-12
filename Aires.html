@@ -18,7 +18,7 @@
 </head>
 <body class="font-sans text-gray-800">
 
-  <!-- Navbar -->
+  
   <!-- Navbar -->
 <header class="bg-white shadow-md fixed w-full z-10">
   <div class="container mx-auto flex justify-between items-center p-4">
@@ -88,11 +88,24 @@
     </div>
 
     <!-- Sertifikasi -->
-    <h3 class="text-2xl font-bold mb-6 text-blue-700 text-center mt-24" data-aos="fade-up">Certification ISO 9001</h3>
-    <div class="grid md:grid-cols-3 gap-6 mb-12 justify-center" data-aos="zoom-in">
-      <img src="sertifikat-AIRES.jpg" alt="Sertifikat ISO 9001 AIRES" class="w-full h-96 object-cover rounded-lg shadow-md">
-    </div>
+    <h3 class="text-2xl font-bold mt-16 mb-6 text-blue-700 text-center" data-aos="fade-up">Certification ISO 9001 : 2015 and BUSINESS LICENSING FOR ELECTRICITY INSTALLATION SERVICES
+</h3>
+<div class="grid md:grid-cols-3 gap-6 mb-12">
+  <img src="sertifikat-AIRES.jpg" alt="Sertifikat 1" 
+       class="gallery-img w-full h-80 object-cover rounded-lg shadow-md cursor-pointer" 
+       data-aos="zoom-in">
   </section>
+  
+  <!--Navigasi-->
+   <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <!-- Tombol close -->
+    <span class="absolute top-6 right-8 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <!-- Tombol navigasi -->
+    <span class="absolute left-6 text-white text-4xl cursor-pointer select-none" onclick="prevImage()">&#10094;</span>
+    <span class="absolute right-6 text-white text-4xl cursor-pointer select-none" onclick="nextImage()">&#10095;</span>
+    <!-- Gambar -->
+    <img id="modalImage" class="max-w-3xl max-h-[90vh] rounded-lg shadow-lg transform transition duration-300 opacity-0 scale-95">
+  </div>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-6 text-center">
@@ -100,7 +113,7 @@
   </footer>
 
   <!-- Script -->
-  <script>
+ <script>
     // Toggle menu mobile
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
@@ -108,8 +121,75 @@
       menu.classList.toggle('hidden');
     });
 
+    // Galeri dan modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const galleryImgs = document.querySelectorAll(".gallery-img");
+    let currentIndex = 0;
+
+    galleryImgs.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        openModal(index);
+      });
+    });
+
+    function openModal(index) {
+      currentIndex = index;
+      modal.classList.remove("hidden");
+      modalImg.src = galleryImgs[currentIndex].src;
+      setTimeout(() => {
+        modalImg.classList.remove("opacity-0", "scale-95");
+        modalImg.classList.add("opacity-100", "scale-100");
+      }, 50);
+    }
+
+    function closeModal() {
+      modalImg.classList.remove("opacity-100", "scale-100");
+      modalImg.classList.add("opacity-0", "scale-95");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        modalImg.src = "";
+      }, 300);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % galleryImgs.length;
+      modalImg.src = galleryImgs[currentIndex].src;
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+      modalImg.src = galleryImgs[currentIndex].src;
+    }
+
+    // Tutup modal kalau klik area luar
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Navigasi keyboard
+    document.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("hidden")) {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+      }
+    });
+
     // Feather icons
     feather.replace();
+
+    // Back-to-top muncul saat scroll
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
   </script>
 
   <!-- AOS Init -->
